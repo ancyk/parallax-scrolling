@@ -1,0 +1,125 @@
+@import 'variables.scss';
+@import 'reset.scss';
+
+body, html {
+  font-family: $primary-font;
+  font-size: 15px;
+  color: $gray;
+}
+a { text-decoration: none; }
+.flex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+// efekt parallax CSS
+.bg {
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  min-height: 400px;
+  max-height: 1000px;
+  background-attachment: fixed;
+}
+.bg1 { 
+  background-image: url('../img/01.jpg'); 
+  height: 100vh;
+  width: 100%;
+  background-attachment: scroll;
+}
+.bg2 { background-image: url('../img/02.jpg'); }
+.bg3 { background-image: url('../img/03.jpg'); }
+.bg4 { background-image: url('../img/04.jpg'); }
+.bg5 { background-image: url('../img/05.jpg'); }
+
+// pasek nawigacji - wersja mobilna
+header {
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  .flex { width: 100%; }
+}
+.menu-min {
+  background: rgba(255,255,255,.7);
+  border-bottom: .3rem solid $gray;
+}
+.img-logo {
+  margin-left: 1.5vh;
+  img {
+    max-height: 8vh;
+    padding: 1vh .5vh;
+  }
+}
+#menu-toggle {
+  height: 100%;
+  i {
+    font-size: 6vh;
+    padding: 2.4vh;
+  }
+}
+#menu-top {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 10vh;
+  width: 100%;
+  a {
+    color: $white;
+    div {
+      font-size: 1.3rem;
+      text-align: center;
+      padding: 1.3rem;
+      display: block;
+      word-spacing: .2rem;
+      letter-spacing: .1rem;
+      background-color: rgba($gray, 0.95);
+      border-bottom: 1px solid rgba($white, 0.3);
+      &:hover {
+        background-color: rgba($white, 0.9);
+        color: $gray;
+      }
+    }
+  }
+}
+
+// wygląd artykułów
+article {
+  padding: 2rem 1rem;
+  text-align: justify;
+  h2 {
+    color: $yellow;
+    text-shadow: $shadow;
+    text-align: center;
+    font-size: 2rem;
+  }
+  p {
+    margin-top: 1rem;
+    line-height: 1.2rem;
+  }
+}
+
+// stopka
+footer {
+  background-color: $gray;
+  color: $white;
+  .flex { display: none; }
+  .sign { 
+    text-align: center; 
+    padding: 1rem;
+    font-weight: 100;
+    line-height: 1.2rem;
+  }
+}
+
+// przycisk "do góry"
+#btn-up {
+  color: $yellow;
+  font-size: 3rem;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+}
