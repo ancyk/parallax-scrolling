@@ -93,10 +93,15 @@ header {
   border-bottom: 0.3rem solid #393C45; }
 
 .img-logo {
-  margin-left: 1.5vh; }
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: .5rem; }
   .img-logo img {
-    max-height: 8vh;
-    padding: 1vh .5vh; }
+    max-height: 80%;
+    padding: 0 .5rem;
+    max-width: 50px;
+    opacity: .9; }
 
 #menu-toggle {
   height: 100%; }
@@ -135,7 +140,7 @@ article {
     font-size: 2rem; }
   article p {
     margin-top: 1rem;
-    line-height: 1.2rem; }
+    line-height: 1.5rem; }
 
 footer {
   background-color: #393C45;
@@ -149,10 +154,114 @@ footer {
     line-height: 1.2rem; }
 
 #btn-up {
-  color: #D29E30;
+  color: rgba(210, 158, 48, 0.9);
   font-size: 3rem;
   position: fixed;
   right: 1rem;
   bottom: 1rem; }
+
+@media (orientation: landscape) {
+  header {
+    height: 15vh; }
+
+  #menu-top {
+    top: 15vh; }
+    #menu-top a div {
+      padding: 1rem; }
+
+  #menu-toggle i {
+    font-size: 11vh; } }
+@media (min-width: 400px) and (orientation: portrait) {
+  html, body {
+    font-size: 16px; }
+
+  #menu-top a div {
+    padding: 1.5rem; }
+
+  article {
+    padding: 2rem; }
+
+  footer {
+    padding: .5rem; }
+
+  #btn-up {
+    font-size: 4rem;
+    right: 2rem; } }
+@media (min-width: 600px) and (orientation: portrait) {
+  html, body {
+    font-size: 17px; } }
+@media (min-width: 768px) {
+  html, body {
+    font-size: 18px; }
+
+  .img-logo img {
+    max-width: 70px; }
+
+  header {
+    height: 4.5rem;
+    box-shadow: 0.05rem 0.1rem 0.3rem #393C45; }
+
+  #menu-toggle {
+    display: none; }
+
+  #menu-top {
+    display: flex;
+    position: static;
+    width: auto; }
+    #menu-top a {
+      color: #393C45; }
+      #menu-top a div {
+        word-spacing: normal;
+        letter-spacing: normal;
+        background-color: transparent;
+        border-bottom: none;
+        font-size: 1rem;
+        height: 100%;
+        box-sizing: border-box;
+        transition: all 500ms ease-in 50ms; }
+        #menu-top a div:hover {
+          background-color: #393C45;
+          color: #D29E30;
+          box-shadow: 0.05rem 0.1rem 0.3rem #393C45; }
+
+  article {
+    padding: 5rem 10rem; }
+    article h2 {
+      font-size: 3.5rem;
+      margin-bottom: 2rem; }
+
+  footer {
+    padding: 3rem 10rem; }
+    footer .flex {
+      display: flex;
+      justify-content: space-between; }
+      footer .flex a {
+        color: #FEFEFE;
+        text-align: center;
+        transition: all 500ms ease-in 50ms; }
+        footer .flex a:hover {
+          color: #D29E30; }
+    footer .sign {
+      padding: 2rem 0 0 0;
+      font-size: .8rem;
+      line-height: 1.2rem; }
+
+  #btn-up {
+    font-size: 5rem;
+    right: 2.5rem;
+    bottom: 2.5rem; }
+
+  .menu-start {
+    height: 10rem;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 0.5) 45%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.05) 100%); }
+    .menu-start .img-logo {
+      margin-left: 1rem; }
+      .menu-start .img-logo img {
+        max-width: 150px;
+        max-height: 130px; }
+    .menu-start #menu-top a div {
+      padding: 3rem 1.5rem; }
+      .menu-start #menu-top a div:hover {
+        background-color: rgba(57, 60, 69, 0.85); } }
 
 /*# sourceMappingURL=style.css.map */

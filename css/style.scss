@@ -48,10 +48,15 @@ header {
   border-bottom: .3rem solid $gray;
 }
 .img-logo {
-  margin-left: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: .5rem;
   img {
-    max-height: 8vh;
-    padding: 1vh .5vh;
+    max-height: 80%;
+    padding: 0 .5rem;
+    max-width: 50px;
+    opacity: .9;
   }
 }
 #menu-toggle {
@@ -98,7 +103,7 @@ article {
   }
   p {
     margin-top: 1rem;
-    line-height: 1.2rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -117,9 +122,115 @@ footer {
 
 // przycisk "do góry"
 #btn-up {
-  color: $yellow;
+  color: rgba($yellow, .9);
   font-size: 3rem;
   position: fixed;
   right: 1rem;
   bottom: 1rem;
+}
+
+// style dla orientacji horyzontalnej
+@media (orientation: landscape) {
+  header { height: 15vh; }
+  #menu-top {
+    top: 15vh;
+    a div { padding: 1rem; }
+  } 
+  #menu-toggle i { font-size: 11vh; }
+}
+
+// style dla urządzeń o min. 400px szerokości
+@media (min-width: 400px) and (orientation: portrait) {
+  html, body { font-size: 16px; }
+  #menu-top a div { padding: 1.5rem; }
+  article { padding: 2rem; }
+  footer { padding: .5rem; }
+  #btn-up {
+    font-size: 4rem;
+    right: 2rem;
+  }
+}
+
+// style dla urządzeń o min. 600px szerokości
+@media (min-width: 600px) and (orientation: portrait) {
+  html, body { font-size: 17px; }
+}
+
+// style dla urządzeń o min. 768px szerokości
+@media (min-width: 768px) {
+  html, body { font-size: 18px; }
+  .img-logo img { max-width: 70px; }
+  header { 
+    height: 4.5rem; 
+    box-shadow: $shadow;
+  }
+  #menu-toggle { display: none; }
+  #menu-top {
+    display: flex;
+    position: static;
+    width: auto;
+    a {
+      color: $gray;
+      div {
+        word-spacing: normal;
+        letter-spacing: normal;
+        background-color: transparent;
+        border-bottom: none;
+        font-size: 1rem;
+        height: 100%;
+        box-sizing: border-box;
+        transition: $transition;
+        &:hover {
+          background-color: $gray;
+          color: $yellow;
+          box-shadow: $shadow;
+        }
+      }
+    }
+  }
+  article {
+    padding: 5rem 10rem;
+    h2 {
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+  footer {
+    padding: 3rem 10rem;
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      a {
+        color: $white;
+        text-align: center;
+        transition: $transition;
+        &:hover { color: $yellow; }
+      }
+    }
+    .sign { 
+      padding: 2rem 0 0 0;
+      font-size: .8rem;
+      line-height: 1.2rem;
+    }
+  }
+  #btn-up {
+    font-size: 5rem;
+    right: 2.5rem;
+    bottom: 2.5rem;
+  }
+  .menu-start {
+    height: 10rem;
+    background: $gradient-nav;
+    .img-logo {
+      margin-left: 1rem;
+      img {
+        max-width: 150px;
+        max-height: 130px
+      }
+    }
+    #menu-top a div {
+      padding: 3rem 1.5rem;
+      &:hover { background-color: rgba($gray, .85); }
+    }
+  }
 }
