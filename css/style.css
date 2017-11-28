@@ -84,7 +84,8 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10; }
+  z-index: 10;
+  transition: all 500ms ease-in 50ms; }
   header .flex {
     width: 100%; }
 
@@ -101,7 +102,8 @@ header {
     max-height: 80%;
     padding: 0 .5rem;
     max-width: 50px;
-    opacity: .9; }
+    opacity: .9;
+    transition: all 500ms ease-in 50ms; }
 
 #menu-toggle {
   height: 100%; }
@@ -110,7 +112,7 @@ header {
     padding: 2.4vh; }
 
 #menu-top {
-  display: none;
+  display: block;
   position: fixed;
   left: 0;
   top: 10vh;
@@ -131,13 +133,14 @@ header {
         color: #393C45; }
 
 article {
-  padding: 2rem 1rem;
+  padding: 11vh 1rem 2rem 1rem;
   text-align: justify; }
   article h2 {
     color: #D29E30;
     text-shadow: 0.05rem 0.1rem 0.3rem #393C45;
     text-align: center;
-    font-size: 2rem; }
+    font-size: 2rem;
+    margin-top: 1rem; }
   article p {
     margin-top: 1rem;
     line-height: 1.5rem; }
@@ -153,7 +156,7 @@ footer {
     font-weight: 100;
     line-height: 1.2rem; }
 
-#btn-up {
+#btn-up a {
   color: rgba(210, 158, 48, 0.9);
   font-size: 3rem;
   position: fixed;
@@ -170,7 +173,10 @@ footer {
       padding: 1rem; }
 
   #menu-toggle i {
-    font-size: 11vh; } }
+    font-size: 11vh; }
+
+  article {
+    padding-top: 16vh; } }
 @media (min-width: 400px) and (orientation: portrait) {
   html, body {
     font-size: 16px; }
@@ -179,24 +185,19 @@ footer {
     padding: 1.5rem; }
 
   article {
-    padding: 2rem; }
+    padding: 2rem;
+    padding-top: 11vh; }
 
   footer {
     padding: .5rem; }
 
-  #btn-up {
+  #btn-up a {
     font-size: 4rem;
     right: 2rem; } }
 @media (min-width: 600px) and (orientation: portrait) {
   html, body {
     font-size: 17px; } }
 @media (min-width: 768px) {
-  html, body {
-    font-size: 18px; }
-
-  .img-logo img {
-    max-width: 70px; }
-
   header {
     height: 4.5rem;
     box-shadow: 0.05rem 0.1rem 0.3rem #393C45; }
@@ -224,8 +225,28 @@ footer {
           color: #D29E30;
           box-shadow: 0.05rem 0.1rem 0.3rem #393C45; }
 
+  .current {
+    background-color: #393C45;
+    color: #D29E30 !important;
+    box-shadow: 0.05rem 0.1rem 0.3rem #393C45; }
+
   article {
-    padding: 5rem 10rem; }
+    padding: 5rem 5rem 3rem 5rem; }
+    article h2 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem; }
+
+  #btn-up a {
+    right: 1.2rem; } }
+@media (min-width: 1024px) {
+  html, body {
+    font-size: 18px; }
+
+  .img-logo img {
+    max-width: 70px; }
+
+  article {
+    padding: 5.5rem 10rem; }
     article h2 {
       font-size: 3.5rem;
       margin-bottom: 2rem; }
@@ -246,7 +267,7 @@ footer {
       font-size: .8rem;
       line-height: 1.2rem; }
 
-  #btn-up {
+  #btn-up a {
     font-size: 5rem;
     right: 2.5rem;
     bottom: 2.5rem; }
