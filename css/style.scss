@@ -5,6 +5,7 @@ body, html {
   font-family: $primary-font;
   font-size: 15px;
   color: $gray;
+  overflow-x: hidden;
 }
 a { text-decoration: none; }
 .flex {
